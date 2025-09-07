@@ -1,11 +1,26 @@
 // Base API configuration
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
+// Debug API configuration in development
+if (import.meta.env.DEV) {
+  console.log('API Base URL:', API_BASE_URL);
+  console.log('Environment:', import.meta.env.MODE);
+}
+
 // Error handler for API responses
 const handleApiError = async (response) => {
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ message: 'Network error' }));
-    throw new Error(error.message || 'Something went wrong');
+    console.error('API Error Response:', {
+      status: response.status,
+      statusText: response.statusText,
+      url: response.url
+    });
+    
+    const error = await response.json().catch(() => ({ 
+      message: `Network error: ${response.status} ${response.statusText}` 
+    }));
+    
+    throw new Error(error.message || `HTTP ${response.status}: ${response.statusText}`);
   }
   return response.json();
 };

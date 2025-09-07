@@ -4,11 +4,32 @@ services:
     env: node
     region: oregon
     plan: free
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
+      - key: FIREBASE_PROJECT_ID
+        value: toyshop-3779d
+      - key: FIREBASE_API_KEY
+        value: AIzaSyDo6fn_G-jNjFCE0zs3ym1FPXpeVnbImcU
+      - key: FIREBASE_AUTH_DOMAIN
+        value: toyshop-3779d.firebaseapp.com
+      - key: FIREBASE_STORAGE_BUCKET
+        value: toyshop-3779d.firebasestorage.app
+      - key: JWT_SECRET
+        value: f7d34c27e844c461ab43c258915568ce7d8b9f2a1e3c4d5f6789abcdef012345
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: FRONTEND_URL
+        value: https://your-vercel-app.vercel.app
+      - key: EMAIL_HOST
+        value: smtp.gmail.com
+      - key: EMAIL_PORT
+        value: 587
+      - key: EMAIL_USER
+        value: rajeshlingala26072004@gmail.com
+      # Note: Add EMAIL_PASS and Firebase Admin credentials through Render dashboard for security
     autoDeploy: true

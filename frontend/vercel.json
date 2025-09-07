@@ -1,5 +1,16 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "vite",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  "env": {
+    "VITE_API_URL": "https://toy-website-backend.onrender.com/api",
+    "VITE_APP_NAME": "Kids Toys Ecommerce",
+    "VITE_DEV_MODE": "false",
+    "VITE_DEBUG": "false"
+  }
 }
