@@ -1,11 +1,14 @@
-# Render Blueprint for Backend
 services:
   - type: web
     name: toy-website-backend
     env: node
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && node server.js
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 10000
     autoDeploy: true
