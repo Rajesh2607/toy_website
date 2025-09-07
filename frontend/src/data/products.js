@@ -1,0 +1,233 @@
+import { usdToInr } from '../utils/currency.js';
+
+export const categories = [
+  { id: 'all', name: 'All Toys', icon: '🧸' },
+  { id: 'action-figures', name: 'Action Figures', icon: '🦸' },
+  { id: 'dolls', name: 'Dolls', icon: '👸' },
+  { id: 'educational', name: 'Educational', icon: '📚' },
+  { id: 'building', name: 'Building Blocks', icon: '🧱' },
+  { id: 'vehicles', name: 'Vehicles', icon: '🚗' },
+  { id: 'puzzles', name: 'Puzzles', icon: '🧩' },
+  { id: 'outdoor', name: 'Outdoor Games', icon: '⚽' },
+  { id: 'musical', name: 'Musical Toys', icon: '🎵' },
+  { id: 'electronics', name: 'Electronic Toys', icon: '🎮' },
+];
+
+export const products = [
+  {
+    id: 1,
+    name: 'Super Hero Action Figure',
+    price: usdToInr(24.99), // ₹2,074
+    originalPrice: usdToInr(29.99), // For showing discount
+    image: 'https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'action-figures',
+    rating: 4.8,
+    reviews: 156,
+    description: 'Amazing superhero figure with movable joints and cape. Perfect for imaginative play and adventure stories.',
+    inStock: true,
+    colors: ['red', 'blue', 'green'],
+    features: ['Movable joints', 'Cape included', 'Premium quality plastic', 'Age 3+'],
+    brand: 'SuperToys',
+    ageGroup: '3-10 years',
+    dimensions: '15cm x 8cm x 5cm',
+    weight: '200g'
+  },
+  {
+    id: 2,
+    name: 'Princess Castle Playset',
+    price: usdToInr(89.99), // ₹7,469
+    originalPrice: usdToInr(109.99),
+    image: 'https://images.pexels.com/photos/1337386/pexels-photo-1337386.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'dolls',
+    rating: 4.9,
+    reviews: 234,
+    description: 'Beautiful castle playset with multiple rooms, furniture, and princess dolls. Create magical fairy tale adventures.',
+    inStock: true,
+    colors: ['pink', 'purple'],
+    features: ['Multiple rooms', '3 princess dolls', 'Furniture set', 'LED lights'],
+    brand: 'FairyLand',
+    ageGroup: '3-8 years',
+    dimensions: '45cm x 35cm x 30cm',
+    weight: '1.2kg'
+  },
+  {
+    id: 3,
+    name: 'Learning Tablet for Kids',
+    price: usdToInr(49.99), // ₹4,149
+    originalPrice: usdToInr(59.99),
+    image: 'https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'educational',
+    rating: 4.7,
+    reviews: 189,
+    description: 'Interactive learning tablet with educational games, puzzles, and activities. Perfect for early learning.',
+    inStock: true,
+    colors: ['blue', 'green'],
+    features: ['50+ learning games', 'Voice recognition', 'Parental controls', 'Durable design'],
+    brand: 'EduTech',
+    ageGroup: '2-6 years',
+    dimensions: '20cm x 15cm x 2cm',
+    weight: '300g'
+  },
+  {
+    id: 4,
+    name: 'Building Block Set',
+    price: usdToInr(34.99), // ₹2,904
+    originalPrice: usdToInr(39.99),
+    image: 'https://images.pexels.com/photos/1148998/pexels-photo-1148998.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'building',
+    rating: 4.6,
+    reviews: 298,
+    description: 'Creative building blocks set with 200+ colorful pieces. Develops creativity and motor skills.',
+    inStock: false,
+    colors: ['multicolor'],
+    features: ['200+ pieces', 'Compatible with major brands', 'Storage box included', 'Non-toxic materials'],
+    brand: 'BuildMax',
+    ageGroup: '3-12 years',
+    dimensions: '30cm x 20cm x 15cm',
+    weight: '800g'
+  },
+  {
+    id: 5,
+    name: 'Remote Control Race Car',
+    price: usdToInr(59.99), // ₹4,979
+    originalPrice: usdToInr(69.99),
+    image: 'https://images.pexels.com/photos/35619/capri-ford-oldtimer-automotive.jpg?auto=compress&cs=tinysrgb&w=400',
+    category: 'vehicles',
+    rating: 4.5,
+    reviews: 167,
+    description: 'High-speed remote control car with LED lights and realistic engine sounds. Perfect for racing fun.',
+    inStock: true,
+    colors: ['red', 'blue', 'yellow'],
+    features: ['Remote control', 'LED lights', 'Sound effects', 'Rechargeable battery'],
+    brand: 'SpeedRacer',
+    ageGroup: '6-14 years',
+    dimensions: '25cm x 12cm x 8cm',
+    weight: '500g'
+  },
+  {
+    id: 6,
+    name: 'Colorful Jigsaw Puzzle',
+    price: usdToInr(19.99), // ₹1,659
+    originalPrice: usdToInr(24.99),
+    image: 'https://images.pexels.com/photos/1111597/pexels-photo-1111597.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'puzzles',
+    rating: 4.4,
+    reviews: 145,
+    description: '500-piece jigsaw puzzle with beautiful artwork. Great for developing problem-solving skills.',
+    inStock: true,
+    colors: ['multicolor'],
+    features: ['500 pieces', 'Premium cardboard', 'Beautiful artwork', 'Storage box'],
+    brand: 'PuzzleMaster',
+    ageGroup: '8+ years',
+    dimensions: '35cm x 25cm x 5cm',
+    weight: '400g'
+  },
+  {
+    id: 7,
+    name: 'Stuffed Animal Bear',
+    price: usdToInr(29.99), // ₹2,489
+    originalPrice: usdToInr(34.99),
+    image: 'https://images.pexels.com/photos/236530/pexels-photo-236530.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'dolls',
+    rating: 4.9,
+    reviews: 312,
+    description: 'Soft and cuddly teddy bear made with premium materials. Perfect companion for bedtime and play.',
+    inStock: true,
+    colors: ['brown', 'white', 'pink'],
+    features: ['Super soft fabric', 'Hypoallergenic stuffing', 'Machine washable', 'Safety tested'],
+    brand: 'CuddleBear',
+    ageGroup: '0-8 years',
+    dimensions: '30cm x 25cm x 15cm',
+    weight: '350g'
+  },
+  {
+    id: 8,
+    name: 'Science Experiment Kit',
+    price: usdToInr(39.99), // ₹3,319
+    originalPrice: usdToInr(49.99),
+    image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'educational',
+    rating: 4.8,
+    reviews: 201,
+    description: 'Complete science experiment kit with 25+ experiments. Perfect for curious young scientists.',
+    inStock: true,
+    colors: ['blue', 'green'],
+    features: ['25+ experiments', 'Safety equipment included', 'Instruction manual', 'STEM learning'],
+    brand: 'ScienceWiz',
+    ageGroup: '8-14 years',
+    dimensions: '40cm x 30cm x 10cm',
+    weight: '1kg'
+  },
+  {
+    id: 9,
+    name: 'Musical Keyboard Piano',
+    price: usdToInr(79.99), // ₹6,639
+    originalPrice: usdToInr(99.99),
+    image: 'https://images.pexels.com/photos/164936/pexels-photo-164936.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'musical',
+    rating: 4.6,
+    reviews: 178,
+    description: '37-key electronic keyboard with multiple sounds, rhythms, and learning modes. Perfect for budding musicians.',
+    inStock: true,
+    colors: ['black', 'white'],
+    features: ['37 keys', '100+ sounds', 'Recording function', 'Demo songs'],
+    brand: 'MelodyMaker',
+    ageGroup: '5-15 years',
+    dimensions: '60cm x 20cm x 8cm',
+    weight: '1.5kg'
+  },
+  {
+    id: 10,
+    name: 'Football Set with Goal',
+    price: usdToInr(44.99), // ₹3,734
+    originalPrice: usdToInr(54.99),
+    image: 'https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'outdoor',
+    rating: 4.7,
+    reviews: 143,
+    description: 'Complete football set with inflatable goal, ball, and pump. Perfect for outdoor play and exercise.',
+    inStock: true,
+    colors: ['white', 'black'],
+    features: ['Inflatable goal', 'Size 3 football', 'Hand pump included', 'Weather resistant'],
+    brand: 'SportsFun',
+    ageGroup: '5-12 years',
+    dimensions: '120cm x 80cm x 80cm',
+    weight: '2kg'
+  },
+  {
+    id: 11,
+    name: 'Electronic Robot Dog',
+    price: usdToInr(129.99), // ₹10,789
+    originalPrice: usdToInr(149.99),
+    image: 'https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'electronics',
+    rating: 4.5,
+    reviews: 89,
+    description: 'Interactive robot dog with voice commands, tricks, and realistic movements. The perfect electronic pet.',
+    inStock: true,
+    colors: ['white', 'gray'],
+    features: ['Voice commands', 'Dancing & tricks', 'Touch sensors', 'Rechargeable'],
+    brand: 'RoboFriend',
+    ageGroup: '6+ years',
+    dimensions: '25cm x 20cm x 15cm',
+    weight: '800g'
+  },
+  {
+    id: 12,
+    name: 'Art & Craft Mega Set',
+    price: usdToInr(54.99), // ₹4,564
+    originalPrice: usdToInr(64.99),
+    image: 'https://images.pexels.com/photos/1145720/pexels-photo-1145720.jpeg?auto=compress&cs=tinysrgb&w=400',
+    category: 'educational',
+    rating: 4.8,
+    reviews: 267,
+    description: 'Complete art and craft set with 150+ pieces including colors, brushes, papers, and craft materials.',
+    inStock: true,
+    colors: ['multicolor'],
+    features: ['150+ pieces', 'Carrying case', 'Instruction book', 'Non-toxic materials'],
+    brand: 'ArtMaster',
+    ageGroup: '4-12 years',
+    dimensions: '35cm x 25cm x 8cm',
+    weight: '1.2kg'
+  }
+];
