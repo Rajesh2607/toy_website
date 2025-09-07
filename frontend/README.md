@@ -1,8 +1,30 @@
-# React + Vite
+# Kids Toys Ecommerce - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-based frontend for the Kids Toys Ecommerce application.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Preview
+
+```bash
+npm run preview
+```
+
+## Environment Variables
+
+Copy `.env.production` to `.env.local` and update the values for local development.
+
+## Deployment
+
+This frontend is configured for deployment on Vercel. See the main `DEPLOYMENT.md` file for detailed instructions.

@@ -16,11 +16,11 @@
    - Click "New Project"
    - Import your GitHub repository
    - Configure the project:
-     - **Root Directory**: Leave blank (will use the entire repo)
+     - **Root Directory**: `frontend` (IMPORTANT: Set this to frontend folder)
      - **Framework Preset**: Vite
-     - **Build Command**: `cd frontend && npm install && npm run build`
-     - **Output Directory**: `frontend/dist`
-     - **Install Command**: `cd frontend && npm install`
+     - **Build Command**: `npm run build` (default)
+     - **Output Directory**: `dist` (default)
+     - **Install Command**: `npm install` (default)
 
 3. **Environment Variables on Vercel**:
    - In your Vercel project dashboard, go to "Settings" → "Environment Variables"
@@ -123,11 +123,17 @@
 ### Common Issues:
 
 1. **404 NOT_FOUND on Vercel**:
-   - Check if `vercel.json` is in the root directory
+   - Ensure Root Directory is set to `frontend` in Vercel project settings
+   - Check if `vercel.json` exists in the frontend folder
    - Verify build command and output directory
-   - Check if `index.html` exists in the dist folder
+   - Check if `index.html` exists in the dist folder after build
 
-2. **CORS Error**:
+2. **Permission Denied Error (Command exited with 126)**:
+   - This occurs when root directory is not set correctly
+   - Make sure to set Root Directory to `frontend` in Vercel project settings
+   - Do not use custom build commands like `cd frontend && npm run build`
+
+3. **CORS Error**:
    - Update `FRONTEND_URL` environment variable in Render
    - Check CORS configuration in `server.js`
 
