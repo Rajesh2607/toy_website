@@ -9,8 +9,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:prod": "CI=false vite build",
+    "build": "npx vite build",
+    "build:prod": "CI=false npx vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext js,jsx --fix",
     "preview": "vite preview"
